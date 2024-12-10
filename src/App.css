@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+.shadow-1 {
+  box-shadow: 0px 4px 8px rgba(36, 36, 36, 0.06);
+}
+
+.shadow-2 {
+  box-shadow: 0 0 2px 0 rgba(37, 42, 49, 0.16),
+    0 1px 4px 0 rgba(37, 42, 49, 0.12);
+}
+
+.shadow-3 {
+  box-shadow: 0 0 1px 0 rgba(37, 42, 49, 0.12),
+    0 1px 2px 0 rgba(37, 42, 49, 0.10);
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+.bo-home-top-section-bg {
+  background-image: url("./assets/home-hero-mobile-ld.png");
+  background-position: center calc(100% - (50px + ((100vh - 667px) * 0.1)));
+  background-repeat: repeat-x;
+  background-size: auto;
+  opacity: 0.3; 
+}
+
+
+.dropdown-scrollbar::-webkit-scrollbar{
+  width: 0px;
+}
