@@ -84,7 +84,7 @@ const Register = () => {
                         <div className='space-y-2 mt-8 mb-4'>
                             <label htmlFor="name" className='font-medium text-[#242424]'>الاسم: اسمك الشخصي او لقب المائلة:</label>
                             <div className='h-14 w-full flex items-center relative'>
-                                <FaUserAlt size={18} className='absolute top-0 bottom-0 right-4 m-auto z-40 text-[#3a7bb7]' />
+                                <FaUserAlt size={18} className='absolute top-0 bottom-0 right-4 m-auto z-30 text-[#3a7bb7]' />
                                 <input type="text" className='relative block w-full h-full rounded-lg border pr-12' placeholder='الاسم اسمك الشخصي أو لقب العائلة' />
                             </div>
                         </div>
@@ -92,7 +92,7 @@ const Register = () => {
                         <div className='space-y-2 mb-4'>
                             <label htmlFor="name" className='font-medium text-[#242424]'>اسم المستخدم:</label>
                             <div className='h-14 w-full flex items-center relative'>
-                                <FaUserAlt size={18} className='absolute top-0 bottom-0 right-4 m-auto z-40 text-[#3a7bb7]' />
+                                <FaUserAlt size={18} className='absolute top-0 bottom-0 right-4 m-auto z-30 text-[#3a7bb7]' />
                                 <input type="text" className='relative block w-full h-full rounded-lg border pr-12' placeholder='يرجى الاحتفاظ به لعملية تسجيل الدخول' />
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const Register = () => {
                                 </div>
 
                                 <div className='h-14 flex-1 flex items-center relative'>
-                                    <IoMdCall className='absolute top-0 bottom-0 right-4 m-auto z-40 text-[#3a7bb7] text-xl' />
+                                    <IoMdCall className='absolute top-0 bottom-0 right-4 m-auto z-30 text-[#3a7bb7] text-xl' />
                                     <input type="text" pattern="\d{8,}"
                                         minLength="8" className='relative block w-full h-full rounded-lg border pr-12' placeholder='اسم المستخدم' />
                                 </div>
@@ -116,7 +116,7 @@ const Register = () => {
                         <div className="space-y-2 mb-4">
                             <label htmlFor="password" className="font-medium text-[#242424]">كلمة المرور:</label>
                             <div className="h-14 w-full flex items-center relative">
-                                <IoIosUnlock className="absolute top-0 bottom-0 right-4 m-auto z-40 text-[#3a7bb7] text-2xl" />
+                                <IoIosUnlock className="absolute top-0 bottom-0 right-4 m-auto z-30 text-[#3a7bb7] text-2xl" />
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     className="relative block w-full h-full rounded-lg border pr-12"
@@ -125,7 +125,7 @@ const Register = () => {
                                 />
                                 <button
                                     type="button"
-                                    className="absolute top-0 bottom-0 left-4 m-auto z-40 text-[#3a7bb7] text-2xl"
+                                    className="absolute top-0 bottom-0 left-4 m-auto z-30 text-[#3a7bb7] text-2xl"
                                     onClick={() => setShowPassword(!showPassword)}
                                 >
                                     {showPassword ? <IoEye /> : <IoEyeOff />}
@@ -137,7 +137,7 @@ const Register = () => {
                         <div className="space-y-2 mb-6">
                             <label htmlFor="confirm-password" className="font-medium text-[#242424]">تأكيد كلمة المرور:</label>
                             <div className="h-14 w-full flex items-center relative">
-                                <IoIosUnlock className="absolute top-0 bottom-0 right-4 m-auto z-40 text-[#3a7bb7] text-2xl" />
+                                <IoIosUnlock className="absolute top-0 bottom-0 right-4 m-auto z-30 text-[#3a7bb7] text-2xl" />
                                 <input
                                     type={showConfirmPassword ? "text" : "password"}
                                     className="relative block w-full h-full rounded-lg border pr-12"
@@ -146,7 +146,7 @@ const Register = () => {
                                 />
                                 <button
                                     type="button"
-                                    className="absolute top-0 bottom-0 left-4 m-auto z-40 text-[#3a7bb7] text-2xl"
+                                    className="absolute top-0 bottom-0 left-4 m-auto z-30 text-[#3a7bb7] text-2xl"
                                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                 >
                                     {showConfirmPassword ? <IoEye /> : <IoEyeOff />}

@@ -4,12 +4,14 @@ import { BiWorld } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { LuTwitter } from "react-icons/lu";
+import Footer from '../../components/Footer';
 
 
 const ContactUs = () => {
     return (
         <div className='bg-[#f5f7f9]'>
             <Header />
+
             <section className='py-5 md:py-10 px-4'>
                 <div className='max-w-[1280px] mx-auto border-t-[5px] border-[#085b8f] p-6 rounded bg-white flex flex-col items-center gap-1 min-h-[500px]'>
                     <h2 className='text-[#085b8f] text-center py-2 font-bold'>اتصل بنا</h2>
@@ -36,6 +38,8 @@ const ContactUs = () => {
                     </div>
                 </div>
             </section>
+
+            <Footer/>
         </div>
     )
 }

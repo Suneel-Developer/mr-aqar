@@ -3,7 +3,7 @@ import AdOne from "../assets/adone.jpg";
 import AdTwo from "../assets/adtwo.png";
 import Addthree from "../assets/addthree.jpg";
 import Slide from "../assets/flag-slide.svg";
-import Durationicon from "../assets/time-icon.svg";
+import { GoClock } from "react-icons/go";
 import AdDetailModal from "./AdDetailsModal";
 
 const adsData = [
@@ -34,7 +34,7 @@ const adsData = [
         title: "للبيع تجاري في السالمية",
         price: "0 دك",
         time: "منذ يومين",
-        description:"يوجد ‏لدينا محلات خلو في السالمية ، شارع سالم المبارك two floor 318.31 متر ، الم...",
+        description: "يوجد ‏لدينا محلات خلو في السالمية ، شارع سالم المبارك two floor 318.31 متر ، الم...",
         category: "normal",
         member: false,
         image: Addthree,
@@ -54,7 +54,7 @@ const Ads = () => {
                 {adsData.map((ad) => (
                     <div
                         key={ad.id}
-                        className={`relative w-full rounded-lg shadow-2 cursor-pointer border border-transparent bg-[#f6eef0] ${ad.category === "important" ? "h-32 md:h-40 flex items-center" : "p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
+                        className={`relative w-full rounded-lg shadow-2 cursor-pointer border border-transparent ${ad.category === "important" ? "h-32 md:h-40 flex items-center bg-[#3a7bb7] text-white" : "bg-white text-black p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
                             }`}
                         onClick={toggleModal}
                     >
@@ -85,22 +85,21 @@ const Ads = () => {
                             </div>
 
                             <div className={`overflow-hidden ${ad.category === "important" ? "space-y-1 py-3 pl-3" : "space-y-1"}`}>
-                                <h2 className="font-bold text-base md:text-lg line-clamp-1 break-words">
+                                <h2 className="font-bold text-base md:text-lg break-words">
                                     {ad.title}
                                 </h2>
+
                                 <div className="flex gap-3">
-                                    <div className="font-medium text-sm text-[#2e6290]">{ad.price}</div>
+                                    <div className={`font-medium text-sm ${ad.category === "important" ? "text-white" : "text-[#2e6290]"}`}>{ad.price}</div>
+
+
                                     <div className="rounded text-sm flex items-center gap-1">
-                                        <img
-                                            src={Durationicon}
-                                            alt="Durationicon"
-                                            className="w-4 h-4"
-                                        />
+                                        <GoClock />
                                         {ad.time}
                                     </div>
                                 </div>
                                 <p
-                                    className={`line-clamp-2 text-[#556885] text-sm font-medium ${ad.category === "important" ? "" : "hidden md:flex"
+                                    className={`line-clamp-2 text-[#556885] text-sm font-medium ${ad.category === "important" ? "text-white" : "hidden md:flex text-[#556885]"
                                         }`}
                                 >
                                     {ad.description}
@@ -108,7 +107,7 @@ const Ads = () => {
                             </div>
                         </div>
                         {ad.category !== "important" && (
-                            <p className="line-clamp-2 text-[#556885] text-sm font-medium mt-2 flex md:hidden">
+                            <p className={`line-clamp-2 text-sm font-medium mt-2 flex md:hidden ${ad.category === "important" ? "text-white" : "text-[#556885]"}`}>
                                 {ad.description}
                             </p>
                         )}

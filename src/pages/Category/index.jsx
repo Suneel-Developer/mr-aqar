@@ -4,6 +4,7 @@ import AreaSearchDropdwon from './AreaSearchDropdwon'
 import PropertyTypeDropdown from './PropertyTypeDropdown'
 import Tabs from './Tabs'
 import Ads from '../../components/Ads'
+import Footer from '../../components/Footer'
 
 const Category = () => {
     
@@ -36,6 +37,9 @@ const Category = () => {
                     <Ads />
                 </div>
             </section>
+
+
+            <Footer/>
         </main>
     )
 }

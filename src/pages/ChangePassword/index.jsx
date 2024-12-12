@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from '../../components/Header'
 import ProfileMenu from '../../components/ProfileMenu'
+import Footer from '../../components/Footer'
 
 const ChangePassword = () => {
     return (
         <div>
             <Header />
 
-            <section className='py-5 md:py-10 px-4'>
+            <section className='py-5 md:py-10 px-4 mb-10'>
                 <div className='max-w-[1280px] w-full mx-auto flex flex-col lg:flex-row gap-5'>
                     <ProfileMenu />
 
@@ -25,6 +26,8 @@ const ChangePassword = () => {
                     </div>
                 </div>
             </section>
+
+            <Footer/>
         </div>
     )
 }

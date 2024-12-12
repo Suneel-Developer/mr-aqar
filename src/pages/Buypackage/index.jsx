@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer';
 
 const Buypackage = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -142,6 +143,8 @@ const Buypackage = () => {
                     </div>
                 </div>
             </section>
+
+            <Footer/>
         </div>
     )
 }

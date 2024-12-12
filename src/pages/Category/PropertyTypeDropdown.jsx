@@ -15,6 +15,7 @@ const PropertyTypeDropdown = () => {
         { id: 4, label: "ارض" },
         { id: 5, label: "عمارة" },
         { id: 6, label: "مزرعة" },
+        { id: 7, label: "تجاري" },
     ];
 
     const filteredOptions = options.filter((option) =>

@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 const AboutUs = () => {
     return (
         <div className='bg-[#f5f7f9]'>
             <Header />
+
             <section className='py-5 md:py-10 px-4'>
                 <div className='max-w-[1280px] mx-auto border-t-[5px] border-[#085b8f] p-6 rounded bg-white'>
                     <div className='space-y-4 text-sm text-[#000000DE]'>
@@ -57,6 +59,8 @@ const AboutUs = () => {
 
                 </div>
             </section>
+
+            <Footer/>
         </div>
     )
 }

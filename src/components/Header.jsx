@@ -1,17 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/logo_header_ar.png';
 import PlusIcon from '../assets/plus-icon.svg';
 import { FaWhatsapp, FaInstagram, FaTwitter, FaUserAlt, FaHome } from 'react-icons/fa';
 import { MdOutlineLogin } from 'react-icons/md';
 import { HiBars3BottomRight } from 'react-icons/hi2';
-import { IoMdClose, IoMdCall } from 'react-icons/io';
+import { IoMdClose, IoMdCall, IoMdArrowDropdown } from 'react-icons/io';
 import { PiBuildingOffice } from 'react-icons/pi';
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import { FaUser } from "react-icons/fa6";
+import HeaderProfileMenu from './HeaderProfileMenu';
+
+
 
 const Header = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const location = useLocation();
+    const [isOpenProfileMenu, setIsOpenProfileMenu] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const toggleprofilemenu = () => {
+        setIsOpenProfileMenu((prev) => !prev);
+    };
+
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setIsOpenProfileMenu(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
 
     // Function to toggle modal visibility
@@ -24,7 +47,7 @@ const Header = () => {
     return (
         <header className="sticky top-0 lg:relative w-full bg-white z-40">
             {/* Top Sub-header */}
-            <div className="bg-[#3a7bb7] hidden lg:flex items-center px-4 h-10">
+            <div className="bg-[#3a7bb7] flex items-center px-4 h-10">
                 <div className="max-w-[1280px] mx-auto w-full flex items-center justify-between">
                     <div className="flex items-center gap-4 text-white text-xl">
                         <Link to="https://twitter.com/mr_aqar_?t=MAG8O24oQN6QXBTvheflvw&s=09" target="_blank">
@@ -38,7 +61,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <div>
-                        <ul className="flex items-center gap-5 text-white">
+                        {/* <ul className="flex items-center gap-5 text-white">
                             <li>
                                 <Link to="/register" className="flex items-center gap-2 font-medium text-sm">
                                     <FaUserAlt size={15} /> تسجيل
@@ -49,7 +72,22 @@ const Header = () => {
                                     <MdOutlineLogin size={18} /> تسجيل الدخول
                                 </Link>
                             </li>
-                        </ul>
+                        </ul> */}
+
+                        <div className="relative" ref={dropdownRef}>
+                            <button
+                                onClick={toggleprofilemenu}
+                                className="flex items-center gap-2 font-medium text-sm text-white"
+                            >
+                                <FaUser size={15} />
+                                حسابي
+                                <IoMdArrowDropdown size={20} />
+                            </button>
+
+                            {isOpenProfileMenu && (
+                                <HeaderProfileMenu />
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,7 +112,7 @@ const Header = () => {
                         <ul className="hidden lg:flex items-center gap-6">
                             {[
                                 { path: '/', label: 'الرئيسية' },
-                                { path: '/companies', label: 'قائمة المكاتب' },
+                                { path: '/offices', label: 'قائمة المكاتب' },
                                 { path: '/aboutus', label: 'نبذه عنا' },
                                 { path: '/contactus', label: 'الاتصال بنا' },
                             ].map((link) => (
@@ -122,7 +160,7 @@ const Header = () => {
                                 <ul className="flex flex-col pe-2 pt-3">
                                     {[
                                         { path: '/', label: 'الرئيسية', icon: <FaHome size={20} /> },
-                                        { path: '/companies', label: 'قائمة المكاتب', icon: <PiBuildingOffice size={22} /> },
+                                        { path: '/offices', label: 'قائمة المكاتب', icon: <PiBuildingOffice size={22} /> },
                                         { path: '/register', label: 'تسجيل', icon: <FaUserAlt size={18} /> },
                                         { path: '/login', label: 'الدخول تسجيل', icon: <MdOutlineLogin size={22} /> },
                                         { path: '/aboutus', label: 'نبذه عنا', icon: <AiOutlineInfoCircle size={22} /> },

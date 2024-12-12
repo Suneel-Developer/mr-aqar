@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { MdOutlineMail } from "react-icons/md";
 import { LuTwitter } from "react-icons/lu";
+import { IoMdCall } from "react-icons/io";
+import Footer from "../../components/Footer";
+
 
 
 
@@ -79,56 +82,66 @@ const companiesdata = [
   },
 ]
 
-const Companies = () => {
+const Offices = () => {
   return (
     <div>
       <Header />
 
       <section className="px-4 py-10">
-        <h1 className="text-center text-black/90 text-2xl md:text-3xl font-semibold pb-5">قائمة المكاتب</h1>
-        <div className="max-w-[1280px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+
+        <div className="max-w-[900px] w-full mx-auto flex flex-col space-y-4">
+          <h1 className="text-black/90 text-2xl text-center font-semibold">قائمة المكاتب</h1>
+
           {companiesdata.map((company, index) => (
-            <div key={index} className="shadow-2 bg-white rounded-lg p-4 flex flex-col items-center justify-between">
-              <div className="flex items-center flex-col">
-                <div className="h-[200px] w-full rounded-lg overflow-hidden mb-4">
+            <Link to="/officesdetails" key={index}>
+              <div className="shadow-2 bg-white rounded-lg p-3 flex gap-4">
+                <div className="h-[110px] w-[110px] rounded-md overflow-hidden">
                   <img src={company.logo} alt={company.name} className="h-full w-full object-cover" />
                 </div>
 
-                <Link to="/companydetails" className="text-lg font-medium uppercase text-center hover:underline transition-all duration-300 mb-2">{company.name}</Link>
-                <Link to={`tel:+965${company.number}`} className="block text-[#2e6290] font-semibold text-lg">{company.number}</Link>
+                <div className="flex-1 justify-center flex-col items-center md:items-start md:justify-start flex">
+                  <h2 className="text-lg font-medium uppercase text-center">{company.name}</h2>
+
+                  <Link to={`tel:+965${company.number}`} className="bg-[#3a7bb7] my-2 w-fit font-medium text-sm text-white px-3 flex items-center gap-2 rounded-md py-2">
+                    {company.number}
+                    <IoMdCall size={18} />
+                  </Link>
+
+                  <div className="flex items-center justify-center flex-wrap gap-2">
+                    {company.whatshap && (
+                      <Link to={company.whatshap} className="bg-[#f5f7f9] text-[#4caf50] rounded-full p-0 h-8 w-8 flex items-center justify-center">
+                        <FaWhatsapp size={18} />
+                      </Link>
+                    )}
+
+                    {company.instagram && (
+                      <Link to={company.instagram} className="bg-[#f5f7f9] text-[#4caf50] rounded-full p-0 h-8 w-8 flex items-center justify-center">
+                        <FaInstagram size={18} />
+                      </Link>
+                    )}
+
+                    {company.gmail && (
+                      <Link to={company.gmail} className="bg-[#f5f7f9] text-[#4caf50] rounded-full p-0 h-8 w-8 flex items-center justify-center">
+                        <MdOutlineMail size={18} />
+                      </Link>
+                    )}
+
+                    {company.twiter && (
+                      <Link to={company.twiter} className="bg-[#f5f7f9] text-[#4caf50] rounded-full p-0 h-8 w-8 flex items-center justify-center">
+                        <LuTwitter size={18} />
+                      </Link>
+                    )}
+                  </div>
+                </div>
               </div>
-
-              <div className="flex items-center justify-center flex-wrap gap-2 mt-4">
-                {company.whatshap && (
-                  <Link to={company.whatshap} className="bg-[#f5f7f9] text-[#4caf50] rounded-lg p-0 h-9 w-9 flex items-center justify-center">
-                    <FaWhatsapp size={22} />
-                  </Link>
-                )}
-
-                {company.instagram && (
-                  <Link to={company.instagram} className="bg-[#f5f7f9] text-[#4caf50] rounded-lg p-0 h-9 w-9 flex items-center justify-center">
-                    <FaInstagram size={22} />
-                  </Link>
-                )}
-
-                {company.gmail && (
-                  <Link to={company.gmail} className="bg-[#f5f7f9] text-[#4caf50] rounded-lg p-0 h-9 w-9 flex items-center justify-center">
-                    <MdOutlineMail size={22} />
-                  </Link>
-                )}
-
-                {company.twiter && (
-                  <Link to={company.twiter} className="bg-[#f5f7f9] text-[#4caf50] rounded-lg p-0 h-9 w-9 flex items-center justify-center">
-                    <LuTwitter size={22} />
-                  </Link>
-                )}
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 };
 
-export default Companies;
+export default Offices;

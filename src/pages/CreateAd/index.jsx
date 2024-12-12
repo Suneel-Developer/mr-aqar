@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import AdTypeModal from "./AdCategorySelector";
 import Forrentlogo from "../../assets/house-service.png"
+import Footer from "../../components/Footer";
 
 
 const categoriesdata = [
@@ -34,7 +35,7 @@ const CreateAd = () => {
     const toggleModal = () => setIsModalOpen(!isModalOpen);
 
     const handleAdTypeSelect = (adType) => {
-        setSelectedAdType(adType); 
+        setSelectedAdType(adType);
     };
 
 
@@ -179,15 +180,21 @@ const CreateAd = () => {
                             {/* Dropdown Options */}
                             {isAreasDropdownOpen && (
                                 <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-2 shadow-lg h-60 overflow-y-auto dropdown-scrollbar">
-                                    {areas.map((area, index) => (
-                                        <div
-                                            key={index}
-                                            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                                            onClick={() => handleAreaOptionSelect(area)}
-                                        >
-                                            {area.label}
-                                        </div>
-                                    ))}
+                                    <div>
+                                        <input type="text" className="w-full p-4 outline-none border-b" />
+                                    </div>
+
+                                    <div className="">
+                                        {areas.map((area, index) => (
+                                            <div
+                                                key={index}
+                                                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                onClick={() => handleAreaOptionSelect(area)}
+                                            >
+                                                {area.label}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -254,6 +261,8 @@ const CreateAd = () => {
                     </form>
                 </div>
             </section>
+
+            <Footer />
         </>
     );
 };

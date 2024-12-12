@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
-import Companies from "./pages/Companies";
-import Companydetails from "./pages/Companies/Companydetails";
+import Companies from "./pages/Offices";
+import Companydetails from "./pages/Offices/Officesdetails";
 import CreateAd from "./pages/CreateAd";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
@@ -13,6 +13,7 @@ import ContactUs from "./pages/ContactUs";
 import Buypackage from "./pages/Buypackage";
 import ChangePassword from "./pages/ChangePassword";
 import Profile from "./pages/Profile";
+import Myads from "./pages/Myads";
 
 const App = () => {
   return (
@@ -20,8 +21,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category" element={<Category />} />
-        <Route path="/companies" element={<Companies />} />
-        <Route path="/companydetails" element={<Companydetails />} />
+        <Route path="/offices" element={<Companies />} />
+        <Route path="/officesdetails" element={<Companydetails />} />
         <Route path="/create-ad" element={<CreateAd />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/buypackage" element={<Buypackage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/changepassword" element={<ChangePassword />} />
+        <Route path="/myads" element={<Myads />} />
       </Routes>
     </BrowserRouter>
   );

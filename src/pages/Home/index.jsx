@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/Header'
 import Categories from '../../components/Categories'
 import Ads from '../../components/Ads'
+import Footer from '../../components/Footer'
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
           <Ads />
         </div>
       </div>
+
+      <Footer/>
     </div>
   )
 }

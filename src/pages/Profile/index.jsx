@@ -2,15 +2,27 @@ import React, { useState } from 'react'
 import Header from '../../components/Header'
 import ProfileMenu from '../../components/ProfileMenu'
 import { LuCloudUpload } from "react-icons/lu";
+import Footer from '../../components/Footer';
 
 
 const Profile = () => {
     const [fileName, setFileName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("90078005");
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file) {
             setFileName(file.name);
+        }
+    };
+
+
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        // Allow only digits and restrict to 8 characters
+        if (/^\d{0,8}$/.test(value)) {
+            setPhoneNumber(value);
         }
     };
 
@@ -36,7 +48,14 @@ const Profile = () => {
 
                             <div>
                                 <label htmlFor="number" className='block font-medium pb-[6px] text-xs opacity-85'>رقم الهاتف</label>
-                                <input type="text" placeholder='90078005' disabled className='border border-gray-300 bg-transparent rounded-md p-4 text-sm w-full flex-1' />
+                                <input
+                                    type="text"
+                                    placeholder="هاتف الشركة"
+                                    value={phoneNumber}
+                                    onChange={handleChange}
+                                    disabled
+                                    className="border border-gray-300 bg-transparent rounded-md p-4 text-sm w-full flex-1"
+                                />
                             </div>
                         </div>
 
@@ -53,7 +72,13 @@ const Profile = () => {
                         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
                             <div>
                                 <label htmlFor="company-phone" className='block font-medium pb-[6px] text-xs opacity-85'>هاتف الشركة</label>
-                                <input type="text" placeholder='هاتف الشركة' value="90078005" className='border border-gray-300 bg-transparent rounded-md p-4 text-sm w-full flex-1' />
+                                <input
+                                    type="text"
+                                    placeholder="هاتف الشركة"
+                                    value={phoneNumber}
+                                    onChange={handleChange}
+                                    className="border border-gray-300 bg-transparent rounded-md p-4 text-sm w-full flex-1"
+                                />
                             </div>
 
                             <div>
@@ -108,6 +133,9 @@ const Profile = () => {
                     </div>
                 </div>
             </section>
+
+
+            <Footer />
         </div>
     )
 }
