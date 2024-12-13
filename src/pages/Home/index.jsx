@@ -3,11 +3,13 @@ import Header from '../../components/Header'
 import Categories from '../../components/Categories'
 import Ads from '../../components/Ads'
 import Footer from '../../components/Footer'
+import Carousel from '../../components/Carousel'
 
 const Home = () => {
   return (
     <div>
       <Header />
+      <Carousel />
       <Categories />
 
 
@@ -18,7 +20,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   )
 }

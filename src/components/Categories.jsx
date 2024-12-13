@@ -24,9 +24,9 @@ const Categories = () => {
                 <div>
                     <ul className='grid grid-cols-4 gap-2'>
                         {categoriesdata.map((categry) => (
-                            <li onClick={(() => navigate('/category'))} className='cursor-pointer p-1 md:p-3 bg-white shadow-2 flex flex-col justify-center items-center rounded-md gap-2'>
+                            <li onClick={(() => navigate('/category'))} className='cursor-pointer p-1 md:p-3 bg-white shadow-2 flex flex-col justify-center items-center rounded-md gap-1'>
                                 <img src={categry.logo} alt={categry.categoryname} className='h-10 md:h-12 w-auto object-cover' />
-                                <span className='text-[#353535] font-medium text-center'>{categry.categoryname}</span>
+                                <span className='text-[#353535] text-xs font-medium text-center'>{categry.categoryname}</span>
                             </li>
                         ))}
                     </ul>

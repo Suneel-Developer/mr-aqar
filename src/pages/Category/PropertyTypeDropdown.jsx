@@ -91,9 +91,20 @@ const PropertyTypeDropdown = () => {
                     />
                 </div>
 
-                <div className="h-8 rounded-full flex items-center absolute end-3 top-1/2 -translate-y-1/2">
-                    <img src={DownArrowIcon} alt="ToggleIcon" className={`w-6 h-6 shrink-0 ${isOpen ? "rotate-180" : ""}`} />
+                <div
+                    className="h-8 rounded-full flex items-center absolute end-3 top-1/2 -translate-y-1/2"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpen((prev) => !prev);
+                    }}
+                >
+                    <img
+                        src={DownArrowIcon}
+                        alt="ToggleIcon"
+                        className={`w-6 h-6 cursor-pointer shrink-0 ${isOpen ? "rotate-180" : ""}`}
+                    />
                 </div>
+
             </div>
 
             {/* Dropdown Body */}

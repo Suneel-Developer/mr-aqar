@@ -1,7 +1,10 @@
 import React from 'react'
-import Header from '../../components/Header'
-import CompanyLogoSix from "../../assets/company-5.png"
 import { Link } from "react-router-dom";
+
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+
+import CompanyLogoSix from "../../assets/company-5.png"
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { MdOutlineMail } from "react-icons/md";
 import { LuTwitter } from "react-icons/lu";
@@ -55,6 +58,8 @@ const Officesdetails = () => {
                     </div>
                 </div>
             </section>
+
+            <Footer />
         </>
     )
 }
