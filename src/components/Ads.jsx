@@ -54,7 +54,7 @@ const Ads = () => {
                 {adsData.map((ad) => (
                     <div
                         key={ad.id}
-                        className={`relative w-full rounded-2xl shadow-2 cursor-pointer border border-transparent ${ad.category === "important" ? "h-28 md:h-40 flex items-center bg-[#3a7bb7] text-white" : "bg-white text-black p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
+                        className={`relative w-full shadow-2 cursor-pointer border border-transparent ${ad.category === "important" ? "h-28 md:h-40 flex items-center bg-[#3a7bb7] text-white" : "bg-white text-black p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
                             }`}
                         onClick={toggleModal}
                     >
