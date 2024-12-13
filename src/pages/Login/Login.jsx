@@ -6,7 +6,6 @@ import { IoEyeOff, IoEye } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo_header_ar.png';
 import kuwaitflag from '../../assets/kuwait-flag.png';
-import Footer from '../../components/Footer';
 
 
 
@@ -94,7 +93,6 @@ const Login = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

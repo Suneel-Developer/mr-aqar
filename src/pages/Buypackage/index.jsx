@@ -73,7 +73,7 @@ const Buypackage = () => {
                                         </div>
 
                                         <div className='rounded-md overflow-hidden shadow-3'>
-                                            <div className='bg-[#085b8f] text-white flex flex-col items-center justify-center p-2 min-h-[130px]'>
+                                            <div className='bg-[#EF322C] text-white flex flex-col items-center justify-center p-2 min-h-[130px]'>
                                                 <h1 className='text-center font-bold text-3xl mb-2'>5 <small className='font-normal text-xl'> د.ك</small></h1>
                                                 <p className='text-center text-sm'>
                                                     اعلان مميز

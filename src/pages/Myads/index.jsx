@@ -4,7 +4,6 @@ import ProfileMenu from '../../components/ProfileMenu'
 import { Link } from 'react-router-dom';
 import AdsImg from "../../assets/adone.jpg"
 import { MdEdit } from "react-icons/md";
-import Footer from '../../components/Footer';
 import UploadAdBtn from '../../components/UploadAdBtn';
 
 
@@ -131,7 +130,6 @@ const Myads = () => {
             </section>
 
             <UploadAdBtn />
-            <Footer />
         </div>
     )
 }

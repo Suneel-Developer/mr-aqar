@@ -8,7 +8,7 @@ import { HiBars3BottomRight } from 'react-icons/hi2';
 import { IoMdClose, IoMdCall } from 'react-icons/io';
 import { PiBuildingOffice } from 'react-icons/pi';
 import { AiOutlineInfoCircle } from "react-icons/ai";
-
+import UserProfile from "../assets/user-profile.jpg"
 
 
 const Header = () => {
@@ -93,10 +93,14 @@ const Header = () => {
                         </ul>
                     </nav>
 
-                    {/* Add Advertisement Button */}
-                    <Link to="/create-ad" className="gap-3 hidden lg:flex items-center border border-[#bed2e4] rounded-lg bg-[#e8f0f7] px-8 h-12 font-medium">
-                        <img src={PlusIcon} alt="PlusIcon" className="size-6" />
-                        إضافة اعلان
+                    {/* Profile btn when user logged Button */}
+                    <Link to="/myads" className='hidden lg:flex items-center gap-4 pt-4 pb-2 px-4'>
+                        <div className='w-14 h-14 rounded-full overflow-hidden border'>
+                            <img src={UserProfile} alt="UserProfile" className='w-full h-full object-cover' />
+                        </div>
+
+                        <p className='text-lg font-medium'>حمد</p>
+
                     </Link>
                 </div>
             </header>
@@ -119,6 +123,15 @@ const Header = () => {
                                         <IoMdClose size={30} />
                                     </button>
                                 </div>
+
+                                <Link to="/myads" className='flex items-center gap-4 pt-4 pb-2 px-4'>
+                                    <div className='w-14 md:w-16 h-14 md:h-16 rounded-full overflow-hidden border'>
+                                        <img src={UserProfile} alt="UserProfile" className='w-full h-full object-cover' />
+                                    </div>
+
+                                    <p className='text-lg font-medium'>حمد</p>
+
+                                </Link>
 
                                 {/* Links */}
                                 <ul className="flex flex-col pe-2 pt-3">

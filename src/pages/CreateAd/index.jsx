@@ -4,7 +4,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import AdTypeModal from "./AdCategorySelector";
 import Forrentlogo from "../../assets/house-service.png"
-import Footer from "../../components/Footer";
 
 
 const categoriesdata = [
@@ -99,13 +98,13 @@ const CreateAd = () => {
         <>
             <Header />
 
-            <section className="px-4 py-10">
-                <div className="max-w-[1000px] mx-auto shadow-3 rounded-3xl px-5 py-10 bg-white">
+            <section className="px-4 py-5 md:py-10">
+                <div className="max-w-[1000px] mx-auto shadow-3 rounded-3xl px-5 py-5 md:py-10 bg-white">
                     <form className="">
                         <h1 className="text-center font-semibold text-2xl text-[#242424] mb-8">إنشاء إعلان</h1>
 
                         {/* First Dropdown opens a modal */}
-                        <div className="mb-6">
+                        <div className="mb-3">
                             {/* Trigger for the modal */}
                             <div
                                 className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] cursor-pointer font-medium"
@@ -124,7 +123,7 @@ const CreateAd = () => {
                         </div>
 
                         {/* Dropdown for Property Type */}
-                        <div className="relative w-full mb-6">
+                        <div className="relative w-full mb-3">
                             <button
                                 type="button"
                                 className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium flex items-center justify-between cursor-pointer"
@@ -154,19 +153,19 @@ const CreateAd = () => {
                         {/* Input for Title */}
                         <input
                             type="text"
-                            className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium mb-6"
+                            className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium mb-3"
                             placeholder="أدخل العنوان"
                         />
 
                         {/* Textarea for Description */}
                         <textarea
-                            className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium mb-6"
+                            className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium mb-3"
                             rows="5"
                             placeholder="الوصف"
                         ></textarea>
 
                         {/* Dropdown for Areas */}
-                        <div className="relative w-full mb-6">
+                        <div className="relative w-full mb-3">
                             <button
                                 type="button"
                                 className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium flex items-center justify-between cursor-pointer"
@@ -201,7 +200,7 @@ const CreateAd = () => {
 
                         <input
                             type="type"
-                            className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium mb-6"
+                            className="w-full border border-gray-300 rounded-lg p-4 text-[#242424] font-medium mb-3"
                             placeholder="السعر (د.ك)"
                         />
 
@@ -209,7 +208,7 @@ const CreateAd = () => {
                         <div className="mb-10">
                             <label className="block text-lg font-medium text-[#242424] mb-2 text-center">تحميل الصورة</label>
 
-                            <div className="border border-gray-400 mx-auto rounded-full w-40 h-40 flex items-center justify-center overflow-hidden relative">
+                            <div className="border border-gray-400 mx-auto rounded-full w-24 md:w-40 h-24 md:h-40 flex items-center justify-center overflow-hidden relative">
                                 {/* Hidden File Input */}
                                 <input
                                     type="file"
@@ -239,9 +238,9 @@ const CreateAd = () => {
                                     <div className="flex flex-col items-center justify-center gap-3 h-full w-full cursor-pointer">
                                         <label
                                             htmlFor="imageUpload"
-                                            className="cursor-pointer text-[#3a7bb7] font-medium flex flex-col gap-3 items-center"
+                                            className="cursor-pointer text-[#3a7bb7] font-medium flex flex-col gap-3 items-center text-xs md:text-sm"
                                         >
-                                            <FaPlus className="text-[#3a7bb7] text-3xl" />
+                                            <FaPlus className="text-[#3a7bb7] text-xl md:text-3xl" />
                                             Add Image
                                         </label>
                                     </div>
@@ -262,7 +261,6 @@ const CreateAd = () => {
                 </div>
             </section>
 
-            <Footer />
         </>
     );
 };

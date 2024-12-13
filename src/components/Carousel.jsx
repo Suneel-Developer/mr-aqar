@@ -4,10 +4,12 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import { FiPlusCircle } from "react-icons/fi";
+
 
 const Carousel = () => {
     return (
-        <div className="px-4 pt-5">
+        <div className="px-16 pt-5">
             <div className="max-w-[1280px] mx-auto">
                 <div className="relative rounded-xl overflow-hidden">
                     <Swiper
@@ -33,38 +35,46 @@ const Carousel = () => {
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
-                                <Link to="/create-ad" className='text-white'>
-                                    إضافة اعلان
-                                </Link>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
-                                <Link to="/create-ad" className='text-white'>
-                                    إضافة اعلان
-                                </Link>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
-                                <Link to="/create-ad" className='text-white'>
-                                    إضافة اعلان
-                                </Link>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
-                                <Link to="/create-ad" className='text-white'>
-                                    إضافة اعلان
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-white shadow-2 m-2 h-[150px] shadow-2">
+                                <Link to="/create-ad" className='text-black w-full h-full flex flex-col items-center justify-center gap-4 font-semibold'>
+                                    <FiPlusCircle size={24} className='text-[#085b8f]' />
+                                    أضف الإعلان هنا
                                 </Link>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
-                                <Link to="/create-ad" className='text-white'>
-                                    إضافة اعلان
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-white shadow-2 m-2 h-[150px] shadow-2">
+                                <Link to="/create-ad" className='text-black w-full h-full flex flex-col items-center justify-center gap-4 font-semibold'>
+                                    <FiPlusCircle size={24} className='text-[#085b8f]' />
+                                    أضف الإعلان هنا
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-white shadow-2 m-2 h-[150px] shadow-2">
+                                <Link to="/create-ad" className='text-black w-full h-full flex flex-col items-center justify-center gap-4 font-semibold'>
+                                    <FiPlusCircle size={24} className='text-[#085b8f]' />
+                                    أضف الإعلان هنا
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-white shadow-2 m-2 h-[150px] shadow-2">
+                                <Link to="/create-ad" className='text-black w-full h-full flex flex-col items-center justify-center gap-4 font-semibold'>
+                                    <FiPlusCircle size={24} className='text-[#085b8f]' />
+                                    أضف الإعلان هنا
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-white shadow-2 m-2 h-[150px] shadow-2">
+                                <Link to="/create-ad" className='text-black w-full h-full flex flex-col items-center justify-center gap-4 font-semibold'>
+                                    <FiPlusCircle size={24} className='text-[#085b8f]' />
+                                    أضف الإعلان هنا
                                 </Link>
                             </div>
                         </SwiperSlide>
