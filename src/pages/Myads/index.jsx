@@ -96,7 +96,7 @@ const Myads = () => {
                                                 <img
                                                     src={AdsImg}
                                                     alt="ProductImg"
-                                                    className="rounded min-w-24 h-24 object-cover mx-auto"
+                                                    className="rounded min-w-20 h-20 object-cover mx-auto"
                                                 />
                                             </td>
 
@@ -120,6 +120,7 @@ const Myads = () => {
                                                 </div>
                                             </td>
                                         </tr>
+
 
                                     </tbody>
                                 </table>
