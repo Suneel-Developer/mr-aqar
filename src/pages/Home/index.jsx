@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Categories from '../../components/Categories'
 import Ads from '../../components/Ads'
 import Footer from '../../components/Footer'
+import UplaodAdBtn from '../../components/UploadAdBtn'
 import Carousel from '../../components/Carousel'
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
         </div>
       </div>
 
+      <UplaodAdBtn />
       <Footer />
     </div>
   )

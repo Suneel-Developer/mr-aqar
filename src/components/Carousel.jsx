@@ -33,28 +33,28 @@ const Carousel = () => {
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[100px] shadow-2 flex items-center justify-center">
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
                                 <Link to="/create-ad" className='text-white'>
                                     إضافة اعلان
                                 </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[100px] shadow-2 flex items-center justify-center">
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
                                 <Link to="/create-ad" className='text-white'>
                                     إضافة اعلان
                                 </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[100px] shadow-2 flex items-center justify-center">
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
                                 <Link to="/create-ad" className='text-white'>
                                     إضافة اعلان
                                 </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[100px] shadow-2 flex items-center justify-center">
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
                                 <Link to="/create-ad" className='text-white'>
                                     إضافة اعلان
                                 </Link>
@@ -62,7 +62,7 @@ const Carousel = () => {
                         </SwiperSlide>
 
                         <SwiperSlide>
-                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[100px] shadow-2 flex items-center justify-center">
+                            <div className="rounded-xl cursor-pointer overflow-hidden bg-[#3a7bb7] h-[130px] shadow-2 flex items-center justify-center">
                                 <Link to="/create-ad" className='text-white'>
                                     إضافة اعلان
                                 </Link>

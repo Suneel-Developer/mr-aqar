@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { LuTwitter } from "react-icons/lu";
 import Footer from '../../components/Footer';
+import UploadAdBtn from '../../components/UploadAdBtn';
 
 
 const ContactUs = () => {
@@ -39,7 +40,8 @@ const ContactUs = () => {
                 </div>
             </section>
 
-            <Footer/>
+            <UploadAdBtn />
+            <Footer />
         </div>
     )
 }

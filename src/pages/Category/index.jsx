@@ -5,9 +5,10 @@ import PropertyTypeDropdown from './PropertyTypeDropdown'
 import Tabs from './Tabs'
 import Ads from '../../components/Ads'
 import Footer from '../../components/Footer'
+import UploadAdBtn from '../../components/UploadAdBtn'
 
 const Category = () => {
-    
+
     return (
         <main>
             <Header />
@@ -39,7 +40,8 @@ const Category = () => {
             </section>
 
 
-            <Footer/>
+            <UploadAdBtn />
+            <Footer />
         </main>
     )
 }

@@ -50,18 +50,18 @@ const Ads = () => {
 
     return (
         <div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-3">
                 {adsData.map((ad) => (
                     <div
                         key={ad.id}
-                        className={`relative w-full rounded-lg shadow-2 cursor-pointer border border-transparent ${ad.category === "important" ? "h-32 md:h-40 flex items-center bg-[#3a7bb7] text-white" : "bg-white text-black p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
+                        className={`relative w-full rounded-lg shadow-2 cursor-pointer border border-transparent ${ad.category === "important" ? "h-28 md:h-40 flex items-center bg-[#3a7bb7] text-white" : "bg-white text-black p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
                             }`}
                         onClick={toggleModal}
                     >
                         <div className="flex gap-3 items-center">
                             <div className="relative">
                                 <div
-                                    className={`${ad.category === "important" ? "w-32 md:w-48 h-32 md:h-40" : "size-20 xl:size-28"
+                                    className={`${ad.category === "important" ? "w-28 md:w-48 h-28 md:h-40" : "size-14 xl:size-28"
                                         } flex-shrink-0 relative rounded-md overflow-hidden`}
                                 >
                                     <img
@@ -74,8 +74,8 @@ const Ads = () => {
                                 {/* Conditional Member Style */}
                                 {ad.member && (
                                     <div className={`absolute -start-2 top-0`}>
-                                        <img src={Slide} alt="Slide" />
-                                        <div className="w-full text-white absolute top-0 start-[1px] bg-[#d7263d] rounded-sm px-1 h-[28px] text-base">
+                                        <img src={Slide} alt="Slide" className="w-[37px] md:w-auto h-7 md:h-auto" />
+                                        <div className="w-full text-white absolute top-0 start-[1px] bg-[#d7263d] rounded-sm px-1 h-5 md:h-[28px] text-xs md:text-base">
                                             <div className="flex items-center justify-center h-full font-bold whitespace-nowrap overflow-hidden">
                                                 مميز
                                             </div>
@@ -85,21 +85,21 @@ const Ads = () => {
                             </div>
 
                             <div className={`overflow-hidden ${ad.category === "important" ? "space-y-1 py-3 pl-3" : "space-y-1"}`}>
-                                <h2 className="font-bold text-base md:text-lg break-words">
+                                <h2 className="font-bold text-xs md:text-lg break-words">
                                     {ad.title}
                                 </h2>
 
                                 <div className="flex gap-3">
-                                    <div className={`font-medium text-sm ${ad.category === "important" ? "text-white" : "text-[#2e6290]"}`}>{ad.price}</div>
+                                    <div className={`font-medium text-xs md:text-sm ${ad.category === "important" ? "text-white" : "text-[#2e6290]"}`}>{ad.price}</div>
 
 
-                                    <div className="rounded text-sm flex items-center gap-1">
+                                    <div className="rounded text-[10px] md:text-sm flex items-center gap-1">
                                         <GoClock />
                                         {ad.time}
                                     </div>
                                 </div>
                                 <p
-                                    className={`line-clamp-2 text-[#556885] text-sm font-medium ${ad.category === "important" ? "text-white" : "hidden md:flex text-[#556885]"
+                                    className={`line-clamp-2 text-[#556885] text-sm font-medium ${ad.category === "important" ? "text-white text-xs md:text-sm" : "hidden md:flex text-[#556885]"
                                         }`}
                                 >
                                     {ad.description}
@@ -107,7 +107,7 @@ const Ads = () => {
                             </div>
                         </div>
                         {ad.category !== "important" && (
-                            <p className={`line-clamp-2 text-sm font-medium mt-2 flex md:hidden ${ad.category === "important" ? "text-white" : "text-[#556885]"}`}>
+                            <p className={`line-clamp-2 text-xs md:text-sm font-medium mt-2 flex md:hidden ${ad.category === "important" ? "text-white" : "text-[#556885]"}`}>
                                 {ad.description}
                             </p>
                         )}

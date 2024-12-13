@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import UploadAdBtn from '../../components/UploadAdBtn'
 
 const AboutUs = () => {
     return (
@@ -60,7 +61,8 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            <Footer/>
+            <UploadAdBtn />
+            <Footer />
         </div>
     )
 }

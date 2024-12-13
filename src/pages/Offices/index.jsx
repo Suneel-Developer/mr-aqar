@@ -12,6 +12,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { LuTwitter } from "react-icons/lu";
 import { IoMdCall } from "react-icons/io";
 import Footer from "../../components/Footer";
+import UploadAdBtn from "../../components/UploadAdBtn";
 
 
 
@@ -139,6 +140,7 @@ const Offices = () => {
         </div>
       </section>
 
+      <UploadAdBtn />
       <Footer />
     </div>
   )

@@ -50,7 +50,7 @@ const AdDetailModal = ({ isOpen, onClose }) => {
                     <div></div>
                 </header>
 
-                <div className="flex flex-col items-center bg-[#3a7bb7] text-on-primary rounded-b-lg px-6 relative py-8 mt-1">
+                <div className="flex flex-col items-center bg-[#84AED6] text-on-primary rounded-b-lg px-6 relative py-8 mt-1">
                     <h2 className="text-center font-bold text-white text-xl">للايجار شقة في أبو فطيرة</h2>
                     <p className="text-xl font-medium text-center text-white pt-2">900 دك</p>
 

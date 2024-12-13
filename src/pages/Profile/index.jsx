@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import ProfileMenu from '../../components/ProfileMenu'
 import { LuCloudUpload } from "react-icons/lu";
 import Footer from '../../components/Footer';
+import UploadAdBtn from '../../components/UploadAdBtn';
 
 
 const Profile = () => {
@@ -135,6 +136,7 @@ const Profile = () => {
             </section>
 
 
+            <UploadAdBtn />
             <Footer />
         </div>
     )
