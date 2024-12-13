@@ -38,23 +38,23 @@ const Myads = () => {
                                 <table className="w-full border-collapse">
                                     <thead className="bg-[#F9FAFB]">
                                         <tr>
-                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-8 px-2 text-center whitespace-nowrap">
+                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-4 px-2 text-center whitespace-nowrap">
                                                 صورة
                                             </th>
 
-                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-8 px-[.9rem] text-center whitespace-nowrap">
+                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-4 px-[.9rem] text-center whitespace-nowrap">
                                                 نوع الإعلان
                                             </th>
 
-                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-8 px-[.9rem] text-center whitespace-nowrap">
+                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-4 px-[.9rem] text-center whitespace-nowrap">
                                                 العنوان
                                             </th>
 
-                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-8 px-[.9rem] text-center whitespace-nowrap">
+                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-4 px-[.9rem] text-center whitespace-nowrap">
                                                 السعر
                                             </th>
 
-                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-8 px-[.9rem] text-center whitespace-nowrap">
+                                            <th className="border-b border-[#dae0ec] uppercase text-black/80 text-xs font-semibold py-4 px-[.9rem] text-center whitespace-nowrap">
                                                 الإجراء
                                             </th>
                                         </tr>
@@ -66,7 +66,7 @@ const Myads = () => {
                                                 <img
                                                     src={AdsImg}
                                                     alt="ProductImg"
-                                                    className="rounded min-w-24 h-24 object-cover mx-auto"
+                                                    className="rounded min-w-20 h-20 object-cover mx-auto"
                                                 />
                                             </td>
 

@@ -8,6 +8,7 @@ import AdTwo from "../assets/adtwo.png";
 import { IoMdTime } from "react-icons/io";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaChevronRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 
@@ -43,9 +44,9 @@ const AdDetailModal = ({ isOpen, onClose }) => {
                         <FaChevronRight />
                     </button>
 
-                    <div className="w-[156px] h-[44px] cursor-pointer">
+                    <Link to="/" className="w-[156px] h-[44px] cursor-pointer">
                         <img src={Logo} alt="Logo" className="bo-progressive-bg-image bo-logo w-[156px] h-[45px] xl:w-[189px] xl:h-[54px]" />
-                    </div>
+                    </Link>
 
                     <div></div>
                 </header>
