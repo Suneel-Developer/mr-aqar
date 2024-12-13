@@ -23,7 +23,7 @@ const AdTypeModal = ({ isOpen, onClose, onSelect, categories }) => {
                         <button
                             key={index}
                             type="button"
-                            className="flex flex-col items-center justify-center border border-gray-300 p-3 rounded-lg text-gray-800 hover:bg-gray-100 font-medium"
+                            className="flex flex-col items-center justify-center border border-gray-300 p-2 text-sm rounded-lg text-gray-800 hover:bg-gray-100 font-medium"
                             onClick={() => {
                                 onSelect(category.categoryname);
                                 onClose();

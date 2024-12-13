@@ -3,22 +3,33 @@ import Header from "../../components/Header";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import AdTypeModal from "./AdCategorySelector";
-import Forrentlogo from "../../assets/house-service.png"
+import Forrentlogo from "../../assets/for-rent.jpg"
+import Internationallogo from "../../assets/international-icon.jpg"
+import Matloblogo from "../../assets/matloblogo.jpg"
+import Shopslogo from "../../assets/shops.jpg"
+import ForSalelogo from "../../assets/for-sale.jpg"
+import Farmlogo from "../../assets/farm.jpg"
+import Otherslogo from "../../assets/others.jpg"
+import Chaletlogo from "../../assets/chalet.jpg"
+import Exchangelogo from "../../assets/exchange.png"
+import HomeServiceslogo from "../../assets/home-services.jpg"
+import Landslogo from "../../assets/lands.jpg"
+import Officeslogo from "../../assets/offices.jpg"
 
 
 const categoriesdata = [
     { categoryname: "للإيجار", logo: Forrentlogo },
-    { categoryname: "دولي", logo: Forrentlogo },
-    { categoryname: "مطلوب", logo: Forrentlogo },
-    { categoryname: "للإيجار", logo: Forrentlogo },
-    { categoryname: "للبيع", logo: Forrentlogo },
-    { categoryname: "مزرعة", logo: Forrentlogo },
-    { categoryname: "آحرون", logo: Forrentlogo },
-    { categoryname: "شاليه", logo: Forrentlogo },
-    { categoryname: "تبادل", logo: Forrentlogo },
-    { categoryname: "خدمات المنزل", logo: Forrentlogo },
-    { categoryname: "الأراضي", logo: Forrentlogo },
-    { categoryname: "مكتب", logo: Forrentlogo },
+    { categoryname: "دولي", logo: Internationallogo },
+    { categoryname: "مطلوب", logo: Matloblogo },
+    { categoryname: "محلات", logo: Shopslogo },
+    { categoryname: "للبيع", logo: ForSalelogo },
+    { categoryname: "مزرعة", logo: Farmlogo },
+    { categoryname: "دعامة أخرى", logo: Otherslogo },
+    { categoryname: "شاليه", logo: Chaletlogo },
+    { categoryname: "للبدل", logo: Exchangelogo },
+    { categoryname: "خدمات المنزل", logo: HomeServiceslogo },
+    { categoryname: "أرض", logo: Landslogo },
+    { categoryname: "مكاتب", logo: Officeslogo },
 ];
 
 
