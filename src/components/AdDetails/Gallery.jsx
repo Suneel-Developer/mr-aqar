@@ -10,8 +10,6 @@ const Gallery = () => {
         AdTwo,
         AdOne,
         AdTwo,
-        AdOne,
-        AdTwo,
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
