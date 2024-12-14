@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import AdOne from "../../assets/adone.jpg";
 import AdTwo from "../../assets/adtwo.png";
-import "react-image-lightbox/style.css";
-import Lightbox from "react-image-lightbox";
+// import "react-image-lightbox/style.css";
+// import Lightbox from "react-image-lightbox";
 
 
 const Gallery = () => {
@@ -58,7 +58,7 @@ const Gallery = () => {
             </div>
 
             {/* Full-Screen Lightbox */}
-            {isOpenGallery && (
+            {/* {isOpenGallery && (
                 <Lightbox
                     mainSrc={images[activeIndex]}
                     nextSrc={images[(activeIndex + 1) % images.length]} // Next image
@@ -73,7 +73,7 @@ const Gallery = () => {
                         setActiveIndex((activeIndex + 1) % images.length)
                     } // Move to the next image
                 />
-            )}
+            )} */}
         </div>
     )
 }
