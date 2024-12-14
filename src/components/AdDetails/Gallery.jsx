@@ -1,30 +1,42 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import AdOne from "../../assets/adone.jpg";
 import AdTwo from "../../assets/adtwo.png";
-import "react-image-lightbox/style.css";
 import Lightbox from "react-image-lightbox";
-
+import "react-image-lightbox/style.css";
 
 const Gallery = () => {
     const images = [
         AdOne,
         AdTwo,
+        AdOne,
+        AdTwo,
+        AdOne,
+        AdTwo,
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isOpenGallery, setIsOpenGallery] = useState(false);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+    const [showSpinner, setShowSpinner] = useState(true);
 
-    // Preload images to avoid the loader issue
+    const nextImage = () => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setShowSpinner(true);
+    };
+
+    const prevImage = () => {
+        setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+        setShowSpinner(true);
+    };
+
     useEffect(() => {
-        const preloadImages = () => {
-            images.forEach((image) => {
-                const img = new Image();
-                img.src = image;
-            });
-        };
-        preloadImages();
-    }, [images]);
+        if (isLightboxOpen) {
+            const timer = setTimeout(() => {
+                setShowSpinner(false);
+            }, 2000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [isLightboxOpen, activeIndex]);
 
     return (
         <div className="pt-12 pb-6 px-3">
@@ -34,8 +46,10 @@ const Gallery = () => {
                     src={images[activeIndex]}
                     alt="Ad image"
                     className="rounded-lg object-contain cursor-pointer"
-                    onLoad={() => setIsImageLoaded(false)}
-                    onClick={() => setIsOpenGallery(true)} 
+                    onClick={() => {
+                        setIsLightboxOpen(true);
+                        setShowSpinner(true);
+                    }}
                 />
             </div>
 
@@ -44,8 +58,7 @@ const Gallery = () => {
                 {images.map((image, index) => (
                     <button
                         key={index}
-                        className={`h-16 w-16 flex-shrink-0 rounded-md overflow-hidden p-[2px] ${activeIndex === index ? "border-2 border-[#3a7bb7]" : ""
-                            }`}
+                        className={`h-16 w-16 flex-shrink-0 rounded-md overflow-hidden p-[2px] ${activeIndex === index ? "border-2 border-[#3a7bb7]" : ""}`}
                         onClick={() => setActiveIndex(index)}
                     >
                         <img
@@ -57,25 +70,21 @@ const Gallery = () => {
                 ))}
             </div>
 
-            {/* Full-Screen Lightbox */}
-            {isOpenGallery && (
+            {/* Lightbox */}
+            {isLightboxOpen && (
                 <Lightbox
                     mainSrc={images[activeIndex]}
-                    nextSrc={images[(activeIndex + 1) % images.length]} // Next image
-                    prevSrc={
-                        images[(activeIndex + images.length - 1) % images.length] // Previous image
-                    }
-                    onCloseRequest={() => setIsOpenGallery(false)} // Close the lightbox
-                    onMovePrevRequest={() =>
-                        setActiveIndex((activeIndex + images.length - 1) % images.length)
-                    } // Move to the previous image
-                    onMoveNextRequest={() =>
-                        setActiveIndex((activeIndex + 1) % images.length)
-                    } // Move to the next image
+                    nextSrc={images[(activeIndex + 1) % images.length]}
+                    prevSrc={images[(activeIndex - 1 + images.length) % images.length]}
+                    onCloseRequest={() => setIsLightboxOpen(false)}
+                    onMovePrevRequest={prevImage}
+                    onMoveNextRequest={nextImage}
+                    spinnerDisabled={!showSpinner}
                 />
             )}
         </div>
-    )
-}
+    );
+};
 
-export default Gallery
+export default Gallery;
+
