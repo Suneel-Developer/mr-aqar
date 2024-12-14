@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import AdOne from "../../assets/adone.jpg";
 import AdTwo from "../../assets/adtwo.png";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 const Gallery = () => {
     const images = [
