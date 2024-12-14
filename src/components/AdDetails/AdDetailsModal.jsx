@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../assets/logo_header_ar.png"
-import CopyIcon from "../assets/copy-icon.svg"
-import CallIcon from "../assets/call-icon.svg"
-import WhatshapIocn from "../assets/whatshap-icon.svg"
-import AdOne from "../assets/adone.jpg";
-import AdTwo from "../assets/adtwo.png";
+import Logo from "../../assets/logo_header_ar.png"
+import CopyIcon from "../../assets/copy-icon.svg"
+import CallIcon from "../../assets/call-icon.svg"
+import WhatshapIocn from "../../assets/whatshap-icon.svg"
 import { IoMdTime } from "react-icons/io";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaChevronRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Gallery from "./Gallery";
 
 
 
@@ -27,9 +26,7 @@ const AdDetailModal = ({ isOpen, onClose }) => {
         };
     }, [isOpen]);
 
-    const [activeImage, setActiveImage] = useState(AdOne);
 
-    const images = [AdOne, AdTwo]; // List of images
 
     return (
         <>
@@ -88,34 +85,7 @@ const AdDetailModal = ({ isOpen, onClose }) => {
                     </a>
                 </div>
 
-                <div className="pt-12 pb-6 px-3">
-                    {/* Main Picture */}
-                    <div className="flex justify-center xl:max-h-96 max-h-[67vh] min-h-28 mb-4">
-                        <img
-                            src={activeImage}
-                            alt="Ad image"
-                            className="rounded-lg object-contain"
-                        />
-                    </div>
-
-                    {/* Thumbnail Gallery */}
-                    <div className="flex justify-center gap-2">
-                        {images.map((image, index) => (
-                            <button
-                                key={index}
-                                className={`h-16 w-16 flex-shrink-0 rounded-md overflow-hidden p-[2px] ${activeImage === image ? "border-2 border-[#3a7bb7]" : ""
-                                    }`}
-                                onClick={() => setActiveImage(image)}
-                            >
-                                <img
-                                    src={image}
-                                    alt={`Thumbnail ${index}`}
-                                    className="w-full rounded-md h-full"
-                                />
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                <Gallery />
             </div>
 
             {/* Overlay */}

@@ -5,8 +5,12 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import ImageOne from "../assets/carousel-1.webp";
-import ImageTwo from "../assets/carousel-2.webp";
+import ImageOne from "../assets/house-1.jpg";
+import ImageTwo from "../assets/house-2.jpg";
+import ImageThree from "../assets/house-3.webp";
+import ImageFour from "../assets/house-4.jpg";
+import ImageFive from "../assets/house-5.jpg";
+import ImageSix from "../assets/house-6.jpg";
 
 const Carousel = () => {
     return (
@@ -67,7 +71,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden  my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageOne} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageThree} alt="Image" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -75,7 +79,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageTwo} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageFour} alt="Image" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -83,7 +87,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageTwo} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageFive} alt="Image" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -91,7 +95,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageTwo} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageSix} alt="Image" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>

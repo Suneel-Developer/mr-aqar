@@ -4,7 +4,7 @@ import AdTwo from "../assets/adtwo.png";
 import Addthree from "../assets/addthree.jpg";
 import Slide from "../assets/flag-slide.svg";
 import { GoClock } from "react-icons/go";
-import AdDetailModal from "./AdDetailsModal";
+import AdDetailModal from "./AdDetails/AdDetailsModal";
 
 const adsData = [
     {
