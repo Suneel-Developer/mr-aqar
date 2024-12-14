@@ -9,13 +9,18 @@ const PropertyTypeDropdown = () => {
     const dropdownRef = useRef(null);
 
     const options = [
-        { id: 1, label: "عقارات" },
-        { id: 2, label: "شقة" },
-        { id: 3, label: "بيت" },
-        { id: 4, label: "ارض" },
-        { id: 5, label: "عمارة" },
-        { id: 6, label: "مزرعة" },
-        { id: 7, label: "تجاري" },
+        { id: 1, value: "apartment", label: "شقة" },
+        { id: 2, value: "architecture", label: "عمارة" },
+        { id: 3, value: "Chalet", label: "شاليه" },
+        { id: 4, value: "commercial", label: "تجاري" },
+        { id: 5, value: "Duplex", label: "دوبلكس" },
+        { id: 6, value: "farm", label: "مزرعة" },
+        { id: 7, value: "role", label: "دور" },
+        { id: 8, value: "house", label: "بيت" },
+        { id: 9, value: "stable", label: "جاخور" },
+        { id: 10, value: "land", label: "ارض" },
+        { id: 11, value: "break", label: "استراحة" },
+        { id: 12, value: "store", label: "مخزن" },
     ];
 
     const filteredOptions = options.filter((option) =>

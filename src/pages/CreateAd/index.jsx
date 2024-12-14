@@ -15,6 +15,9 @@ import Exchangelogo from "../../assets/exchange.png"
 import HomeServiceslogo from "../../assets/home-services.jpg"
 import Landslogo from "../../assets/lands.jpg"
 import Officeslogo from "../../assets/offices.jpg"
+import UploadGallery from "./UploadGallery";
+
+
 
 
 const categoriesdata = [
@@ -91,19 +94,7 @@ const CreateAd = () => {
     };
 
 
-    const [imagePreview, setImagePreview] = useState(null);
 
-    const handleImageChange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = () => {
-                setImagePreview(reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
-        event.target.value = null;
-    };
 
     return (
         <>
@@ -215,49 +206,7 @@ const CreateAd = () => {
                             placeholder="السعر (د.ك)"
                         />
 
-                        {/* Image Upload */}
-                        <div className="mb-10">
-                            <label className="block text-lg font-medium text-[#242424] mb-2 text-center">تحميل الصورة</label>
-
-                            <div className="border border-gray-400 mx-auto rounded-full w-24 md:w-40 h-24 md:h-40 flex items-center justify-center overflow-hidden relative">
-                                {/* Hidden File Input */}
-                                <input
-                                    type="file"
-                                    className="hidden"
-                                    id="imageUpload"
-                                    accept="image/*"
-                                    onChange={handleImageChange}
-                                />
-
-                                {/* Image Preview or Add Image UI */}
-                                {imagePreview ? (
-                                    <div className="relative w-full h-full">
-                                        {/* Display the image */}
-                                        <img
-                                            src={imagePreview}
-                                            alt="Uploaded Preview"
-                                            className="w-full h-full object-cover"
-                                        />
-                                        {/* Option to re-select image */}
-                                        <label
-                                            htmlFor="imageUpload"
-                                            className="absolute inset-0 cursor-pointer"
-                                        >
-                                        </label>
-                                    </div>
-                                ) : (
-                                    <div className="flex flex-col items-center justify-center gap-3 h-full w-full cursor-pointer">
-                                        <label
-                                            htmlFor="imageUpload"
-                                            className="cursor-pointer text-[#3a7bb7] font-medium flex flex-col gap-3 items-center text-xs md:text-sm"
-                                        >
-                                            <FaPlus className="text-[#3a7bb7] text-xl md:text-3xl" />
-                                            Add Image
-                                        </label>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
+                        <UploadGallery />
 
                         {/* Submit Button */}
                         <div className="text-center">
