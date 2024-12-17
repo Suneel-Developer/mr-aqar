@@ -13,6 +13,7 @@ import { LuTwitter } from "react-icons/lu";
 import { IoMdCall } from "react-icons/io";
 import Footer from "../../components/Footer";
 import UploadAdBtn from "../../components/UploadAdBtn";
+import Carousel from "../../components/Carousel";
 
 
 
@@ -87,6 +88,8 @@ const Offices = () => {
   return (
     <div>
       <Header />
+
+      <Carousel />
 
       <section className="px-4 py-10">
 

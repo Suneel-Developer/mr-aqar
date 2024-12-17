@@ -4,9 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hoverbgtable: "rgba(0,0,0,.04)"
-      }
+        hoverbgtable: "rgba(0,0,0,.04)",
+      },
+
+      screens: {
+        xs: "410px",
+      },
     },
   },
   plugins: [],
-}
+};

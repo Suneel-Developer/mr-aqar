@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import Category from "./pages/Category";
+import Search from "./pages/Search";
 import Companies from "./pages/Offices";
 import Companydetails from "./pages/Offices/Officesdetails";
 import CreateAd from "./pages/CreateAd";
@@ -20,7 +20,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/category" element={<Category />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/offices" element={<Companies />} />
         <Route path="/officesdetails" element={<Companydetails />} />
         <Route path="/create-ad" element={<CreateAd />} />

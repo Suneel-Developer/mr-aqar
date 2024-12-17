@@ -24,7 +24,7 @@ const Header = () => {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <header className="sticky top-0 lg:relative w-full bg-white z-40">
+        <header className="w-full bg-white z-30">
             {/* Top Sub-header */}
             <div className="bg-[#3a7bb7] hidden lg:flex items-center px-4 h-10">
                 <div className="max-w-[1280px] mx-auto w-full flex items-center justify-between">

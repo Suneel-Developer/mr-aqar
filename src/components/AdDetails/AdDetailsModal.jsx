@@ -3,6 +3,7 @@ import Logo from "../../assets/logo_header_ar.png"
 import CopyIcon from "../../assets/copy-icon.svg"
 import CallIcon from "../../assets/call-icon.svg"
 import WhatshapIocn from "../../assets/whatshap-icon.svg"
+import UserProfile from "../../assets/user-profile.jpg"
 import { IoMdTime } from "react-icons/io";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaChevronRight } from "react-icons/fa6";
@@ -73,6 +74,15 @@ const AdDetailModal = ({ isOpen, onClose }) => {
                     للايجار شقه في السرداب في منطقه ابو فطيره تشطيب
                     سوبر ديلوكس اربع غرف نوم ٢ ماست...
                 </p>
+
+                <Link to="/myads" className='flex items-center justify-center gap-4 mb-4 px-4'>
+                    <div className='w-14 md:w-16 h-14 md:h-16 rounded-full overflow-hidden border'>
+                        <img src={UserProfile} alt="UserProfile" className='w-full h-full object-cover' />
+                    </div>
+
+                    <p className='text-lg font-medium'>حمد</p>
+
+                </Link>
 
                 <div className="flex gap-3 justify-center">
                     <a href="tel:+90078005" className="text-base shrink-0 inline-flex text-white items-center justify-center whitespace-nowrap transition-colors h-12 rounded-lg font-bold bg-[#38a854] px-2.5">

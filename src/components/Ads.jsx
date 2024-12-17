@@ -49,12 +49,12 @@ const Ads = () => {
     };
 
     return (
-        <div>
+        <>
             <div className="flex flex-col gap-3">
                 {adsData.map((ad) => (
                     <div
                         key={ad.id}
-                        className={`relative w-full shadow-2 cursor-pointer border border-transparent ${ad.category === "important" ? "h-28 md:h-40 flex items-center bg-[#3a7bb7] text-white" : "bg-white text-black p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
+                        className={`w-full shadow-2 ${ad.category === "important" ? "h-28 md:h-40 flex items-center bg-[#3a7bb7] text-white cursor-pointer" : "bg-white text-black cursor-pointer p-3 xl:p-4 flex items-start md:items-center flex-col md:flex-row"
                             }`}
                         onClick={toggleModal}
                     >
@@ -71,7 +71,6 @@ const Ads = () => {
                                     />
                                 </div>
 
-                                {/* Conditional Member Style */}
                                 {ad.member && (
                                     <div className={`absolute -start-2 top-0`}>
                                         <img src={Slide} alt="Slide" className="w-[37px] md:w-auto h-7 md:h-auto" />
@@ -117,7 +116,7 @@ const Ads = () => {
 
             {/* Modal Component */}
             <AdDetailModal isOpen={isModalOpen} onClose={toggleModal} />
-        </div>
+        </>
     );
 };
 

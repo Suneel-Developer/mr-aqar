@@ -26,7 +26,7 @@ const UploadGallery = () => {
         if (file) {
             const newImage = URL.createObjectURL(file);
             const updatedImages = [...images];
-            updatedImages[index] = newImage; 
+            updatedImages[index] = newImage;
             setImages(updatedImages);
         }
     };
@@ -39,12 +39,12 @@ const UploadGallery = () => {
                 </div>
 
                 <h3 className="font-semibold text-sm md:text-base">
-                    Images attract interest to your ad!
+                    الصور تجذب الاهتمام لإعلانك!
                 </h3>
 
                 <p className="text-xs text-gray-500">
-                    Pick images from different angles with different details. You can
-                    upload up to 12 images (we recommend horizontal images).
+                    اختر الصور من زوايا مختلفة بتفاصيل مختلفة. أنت تستطيع
+                    قم بتحميل ما يصل إلى 12 صورة (نوصي بالصور الأفقية).
                 </p>
 
                 <label className="block mt-4">
@@ -56,7 +56,7 @@ const UploadGallery = () => {
                         className="hidden"
                     />
                     <div className="cursor-pointer inline-block border border-blue-500 px-4 py-2 text-sm text-blue-500 font-medium">
-                        Select Images
+                        حدد الصور
                     </div>
                 </label>
             </div>
@@ -89,7 +89,7 @@ const UploadGallery = () => {
                             type='button'
                             className="absolute top-1 right-1 bg-black bg-opacity-50 text-white w-5 h-5 rounded-full flex justify-center items-center"
                         >
-                        <IoCloseOutline size={16} /> 
+                            <IoCloseOutline size={16} />
                         </button>
                     </div>
                 ))}
