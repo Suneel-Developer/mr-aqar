@@ -65,8 +65,8 @@ const PropertyTypeDropdown = () => {
             <button
                 onClick={toggleDropdown}
                 className={`text-sm font-medium border rounded-md flex justify-between gap-3 h-9 pl-2 pr-3 items-center whitespace-nowrap ${isOpen
-                        ? "bg-[#3a7bb7] text-white border-transparent"
-                        : "border-[#bed2e4] text-[#2e6290] bg-[#e8f0f7]"
+                    ? "bg-[#3a7bb7] text-white border-transparent"
+                    : "border-[#bed2e4] text-[#2e6290] bg-[#e8f0f7]"
                     }`}
             >
                 {displayLabel}
@@ -79,26 +79,28 @@ const PropertyTypeDropdown = () => {
 
             {/* Dropdown List */}
             {isOpen && (
-                <ul className="absolute mt-2 bg-white shadow-2 p-2 rounded-xl w-[240px] h-[200px] overflow-y-auto dropdown-scrollbar z-50">
-                    {options.map((type) => (
-                        <li
-                            key={type.id}
-                            onClick={() => handleSelect(type.id)}
-                            className={`flex items-center gap-2 font-bold px-2 rounded-md h-10 text-sm cursor-pointer ${selectedOptions.includes(type.id)
+                <div onClick={() => setIsOpen(false)} className="fixed top-0 sm:top-auto sm:absolute bg-black/30 sm:bg-transparent w-full sm:w-auto h-screen sm:h-auto right-0 p-3 sm:p-0 z-50">
+                    <ul className="bg-white shadow-2 p-2 rounded-xl w-full sm:w-[240px] z-10 h-56 dropdown-scrollbar overflow-y-auto mt-[210px] sm:mt-2">
+                        {options.map((type) => (
+                            <li
+                                key={type.id}
+                                onClick={() => handleSelect(type.id)}
+                                className={`flex items-center gap-2 font-bold px-2 rounded-md h-10 text-sm cursor-pointer ${selectedOptions.includes(type.id)
                                     ? "bg-[#e8f0f7] text-[#2e6290]"
                                     : "hover:bg-[#e8f0f7] text-[#556885]"
-                                }`}
-                        >
-                            <input
-                                type="checkbox"
-                                checked={selectedOptions.includes(type.id)}
-                                readOnly
-                                className="w-4 h-4 cursor-pointer border border-[#dcdcdc] rounded"
-                            />
-                            {type.label}
-                        </li>
-                    ))}
-                </ul>
+                                    }`}
+                            >
+                                <input
+                                    type="checkbox"
+                                    checked={selectedOptions.includes(type.id)}
+                                    readOnly
+                                    className="w-4 h-4 cursor-pointer border border-[#dcdcdc] rounded"
+                                />
+                                {type.label}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             )}
         </div>
     );

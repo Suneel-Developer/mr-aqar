@@ -1,34 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AdOne from "../../assets/adone.jpg";
 import AdTwo from "../../assets/adtwo.png";
-import Lightbox from "react-18-image-lightbox";
-import "react-18-image-lightbox/style.css";
 
 const Gallery = () => {
   const images = [AdOne, AdTwo, AdOne, AdTwo];
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [showSpinner, setShowSpinner] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextImage = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    setShowSpinner(true);
   };
 
   const prevImage = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    setShowSpinner(true);
   };
 
-  useEffect(() => {
-    if (isLightboxOpen) {
-      const timer = setTimeout(() => {
-        setShowSpinner(false);
-      }, 2000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isLightboxOpen, activeIndex]);
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="pt-6 pb-4 px-2 md:px-3">
@@ -38,10 +27,7 @@ const Gallery = () => {
           src={images[activeIndex]}
           alt="Ad image"
           className="rounded-lg object-contain cursor-pointer max-w-full max-h-[50vh] md:max-h-80"
-          onClick={() => {
-            setIsLightboxOpen(true);
-            setShowSpinner(true);
-          }}
+          onClick={() => setIsModalOpen(true)}
         />
       </div>
 
@@ -64,17 +50,53 @@ const Gallery = () => {
         ))}
       </div>
 
-      {/* Lightbox */}
-      {isLightboxOpen && (
-        <Lightbox
-          mainSrc={images[activeIndex]}
-          nextSrc={images[(activeIndex + 1) % images.length]}
-          prevSrc={images[(activeIndex - 1 + images.length) % images.length]}
-          onCloseRequest={() => setIsLightboxOpen(false)}
-          onMovePrevRequest={prevImage}
-          onMoveNextRequest={nextImage}
-          spinnerDisabled={!showSpinner}
-        />
+      {/* Fullscreen Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50">
+          {/* Close and Zoom Buttons */}
+          <div className="absolute top-4 right-4 flex gap-2">
+            <button
+              onClick={closeModal}
+              className="text-white text-2xl font-bold bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center"
+            >
+              ✕
+            </button>
+            <button
+              className="text-white text-2xl font-bold bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center"
+              onClick={() => alert("Zoom functionality not implemented")}
+            >
+              🔍
+            </button>
+          </div>
+
+          {/* Image Navigation */}
+          <div className="relative flex items-center justify-center w-full h-full px-4">
+            <button
+              onClick={prevImage}
+              className="absolute left-4 text-white text-3xl bg-gray-800 bg-opacity-50 p-3 rounded-full hover:bg-opacity-80"
+            >
+              ◀
+            </button>
+
+            <img
+              src={images[activeIndex]}
+              alt="Full screen"
+              className="max-h-[90vh] max-w-full object-contain"
+            />
+
+            <button
+              onClick={nextImage}
+              className="absolute right-4 text-white text-3xl bg-gray-800 bg-opacity-50 p-3 rounded-full hover:bg-opacity-80"
+            >
+              ▶
+            </button>
+          </div>
+
+          {/* Current Image Number */}
+          <div className="absolute top-4 left-4 text-white text-lg bg-gray-800 px-3 py-1 rounded-md">
+            {activeIndex + 1} / {images.length}
+          </div>
+        </div>
       )}
     </div>
   );

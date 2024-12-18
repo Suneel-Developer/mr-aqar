@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import AdOne from "../assets/adone.jpg";
-import AdTwo from "../assets/adtwo.png";
-import Addthree from "../assets/addthree.jpg";
-import Slide from "../assets/flag-slide.svg";
+import AdOne from "../../assets/adone.jpg";
+import AdTwo from "../../assets/adtwo.png";
+import Addthree from "../../assets/addthree.jpg";
+import Slide from "../../assets/flag-slide.svg";
 import { GoClock } from "react-icons/go";
-import AdDetailModal from "./AdDetails/AdDetailsModal";
+import AdDetailModal from "../../components/AdDetails/AdDetailsModal";
 
 const adsData = [
     {

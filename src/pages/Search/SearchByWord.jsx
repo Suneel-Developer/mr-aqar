@@ -52,18 +52,20 @@ const SearchByWord = () => {
 
             {/* Dropdown List */}
             {isOpen && (
-                <div className="absolute mt-2 sm:left-1/2 sm:-translate-x-1/2 bg-white shadow-2 p-4 rounded-xl w-[300px] sm:w-[380px] z-50">
-                    <p className="text-[#556885] text-sm mb-2">يمكنك البحث بالكلمة مثلا (سطح) او (حوش)</p>
+                <div onClick={() => setIsOpen(false)} className="fixed top-0 sm:top-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 bg-black/30 sm:bg-transparent w-full sm:w-auto h-screen sm:h-auto right-0 sm:right-auto p-3 sm:p-0 z-50">
+                    <div className="bg-white shadow-2 p-4 rounded-xl w-full sm:w-[380px] mt-[210px] sm:mt-2">
+                        <p className="text-[#556885] text-sm mb-2">يمكنك البحث بالكلمة مثلا (سطح) او (حوش)</p>
 
-                    <div className='h-12 w-full flex items-center relative'>
-                        <GrSearch size={18} className='absolute top-0 bottom-0 right-4 m-auto z-30 text-[#556885]' />
-                        <input type="text" className='relative block w-full h-full rounded-lg border pr-12' placeholder='إبحث بالكلمة' />
-                    </div>
-                    <hr className="my-4" />
+                        <div className='h-12 w-full flex items-center relative'>
+                            <GrSearch size={18} className='absolute top-0 bottom-0 right-4 m-auto z-30 text-[#556885]' />
+                            <input type="text" className='relative block w-full h-full rounded-lg border pr-12' placeholder='إبحث بالكلمة' />
+                        </div>
+                        <hr className="my-4" />
 
-                    <div className="flex items-center justify-between gap-2">
-                        <button className="max-w-[112px] w-full text-center hover:underline text-[#556885] font-medium">مسح</button>
-                        <button className="bg-[#3a7bb7] text-white font-semibold text-sm rounded-md h-11 w-full max-w-[112px] transition-all duration-300 hover:opacity-90">بحث</button>
+                        <div className="flex items-center justify-between gap-2">
+                            <button className="max-w-[112px] w-full text-center hover:underline text-[#556885] font-medium">مسح</button>
+                            <button className="bg-[#3a7bb7] text-white font-semibold text-sm rounded-md h-11 w-full max-w-[112px] transition-all duration-300 hover:opacity-90">بحث</button>
+                        </div>
                     </div>
                 </div>
             )}
