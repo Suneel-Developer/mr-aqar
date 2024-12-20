@@ -66,9 +66,13 @@ const PriceRange = () => {
 
             {/* Dropdown Content */}
             {isOpen && (
-                <div onClick={() => setIsOpen(false)} className="fixed top-0 sm:top-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 bg-black/30 sm:bg-transparent w-full sm:w-auto h-screen sm:h-auto right-0 sm:right-auto p-3 sm:p-0 z-50">
+                <div
+                    className="fixed top-0 sm:top-auto sm:absolute sm:left-1/2 sm:-translate-x-1/2 bg-black/30 sm:bg-transparent w-full sm:w-auto h-screen sm:h-auto right-0 sm:right-auto p-3 sm:p-0 z-50"
+                    onClick={() => setIsOpen(false)}
+                >
                     <div
                         className="bg-white shadow-2 p-4 rounded-xl w-full sm:w-[380px] mt-[210px] sm:mt-2"
+                        onClick={(e) => e.stopPropagation()} // Prevent dropdown from closing
                     >
                         {/* Slider */}
                         <div className="mb-4">
@@ -140,7 +144,6 @@ const PriceRange = () => {
                 </div>
             )}
         </div>
-
     );
 };
 

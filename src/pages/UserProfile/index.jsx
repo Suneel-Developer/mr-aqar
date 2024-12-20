@@ -18,9 +18,9 @@ const UserProfile = () => {
             <Header />
 
             <section>
-                <div className='bg-[#3A7AB7] py-20 px-4'>
+                <div className='bg-[#3A7AB7] py-10 md:py-20 px-4'>
                     <div className='max-w-[1280px] w-full mx-auto'>
-                        <div className='w-32 md:w-40 mx-auto h-32 md:h-40 rounded-full overflow-hidden'>
+                        <div className='w-24 md:w-40 mx-auto h-24 md:h-40 rounded-full overflow-hidden'>
                             <img src={Profile} alt="" className='w-full h-full object-cover' />
                         </div>
 

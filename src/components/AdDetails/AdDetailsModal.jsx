@@ -104,7 +104,7 @@ const AdDetailModal = ({ isOpen, onClose }) => {
                     سوبر ديلوكس اربع غرف نوم ٢ ماست...
                 </p>
 
-                <Link to="/myads" className='flex items-center justify-center gap-4 mb-4 px-4'>
+                <Link to="/user-profile" className='flex items-center justify-center gap-4 mb-4 px-4'>
                     <div className='w-14 md:w-16 h-14 md:h-16 rounded-full overflow-hidden border'>
                         <img src={UserProfile} alt="UserProfile" className='w-full h-full object-cover' />
                     </div>

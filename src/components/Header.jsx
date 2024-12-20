@@ -11,14 +11,16 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import UserProfile from "../assets/user-profile.jpg"
 
 
-const Header = () => {
+const Header = ({ setIsMenuOpen }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const location = useLocation();
 
 
     // Function to toggle modal visibility
     const toggleModal = () => {
-        setIsModalOpen(!isModalOpen);
+        const newState = !isModalOpen;
+        setIsModalOpen(newState);
+        setIsMenuOpen(newState); // Notify parent component
     };
 
     const isActive = (path) => location.pathname === path;
