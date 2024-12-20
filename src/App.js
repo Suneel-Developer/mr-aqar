@@ -14,6 +14,7 @@ import Buypackage from "./pages/Buypackage";
 import ChangePassword from "./pages/ChangePassword";
 import Profile from "./pages/Profile";
 import Myads from "./pages/Myads";
+import UserProfile from "./pages/UserProfile";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/buypackage" element={<Buypackage />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/user-profile" element={<UserProfile />} />
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/myads" element={<Myads />} />
       </Routes>

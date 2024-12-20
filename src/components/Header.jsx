@@ -94,7 +94,7 @@ const Header = () => {
                     </nav>
 
                     {/* Profile btn when user logged Button */}
-                    <Link to="/myads" className='hidden lg:flex items-center gap-4 pt-4 pb-2 px-4'>
+                    <Link to="/user-profile" className='hidden lg:flex items-center gap-4 pt-4 pb-2 px-4'>
                         <div className='w-14 h-14 rounded-full overflow-hidden border'>
                             <img src={UserProfile} alt="UserProfile" className='w-full h-full object-cover' />
                         </div>
@@ -124,7 +124,7 @@ const Header = () => {
                                     </button>
                                 </div>
 
-                                <Link to="/myads" className='flex items-center gap-4 pt-4 pb-2 px-4'>
+                                <Link to="/user-profile" className='flex items-center gap-4 pt-4 pb-2 px-4'>
                                     <div className='w-14 md:w-16 h-14 md:h-16 rounded-full overflow-hidden border'>
                                         <img src={UserProfile} alt="UserProfile" className='w-full h-full object-cover' />
                                     </div>

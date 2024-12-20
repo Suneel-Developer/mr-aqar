@@ -129,7 +129,7 @@ const AdDetailModal = ({ isOpen, onClose }) => {
                     <div className="flex justify-center xl:max-h-96 max-h-[50vh] min-h-28 mb-4">
                         <img
                             src={images[activeIndex]}
-                            alt="Ad image"
+                            alt="Main galllery"
                             className="rounded-lg object-contain cursor-pointer max-w-full max-h-[50vh] md:max-h-80"
                             onClick={() => setIsModalOpen(true)}
                         />

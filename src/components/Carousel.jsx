@@ -55,7 +55,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageOne} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageOne} alt="gallery" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -63,7 +63,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageTwo} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageTwo} alt="gallery" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -71,7 +71,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden  my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageThree} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageThree} alt="gallery" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -79,7 +79,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageFour} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageFour} alt="gallery" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -87,7 +87,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageFive} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageFive} alt="gallery" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
@@ -95,7 +95,7 @@ const Carousel = () => {
                         <SwiperSlide>
                             <div className="rounded-xl cursor-pointer overflow-hidden my-2 h-[180px] mx-5">
                                 <Link to="/create-ad">
-                                    <img src={ImageSix} alt="Image" className="w-full h-full object-cover" />
+                                    <img src={ImageSix} alt="gallery" className="w-full h-full object-cover" />
                                 </Link>
                             </div>
                         </SwiperSlide>
